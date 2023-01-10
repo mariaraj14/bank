@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form </title>
+    <link href="{% static 'js/cascade.js' %}" rel="stylesheet">
+    <link href="{% static 'js/jquery.casecade2.js' %}" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+<!--    <link href="//cdn.syncfusion.com/ej2/20.4.38/ej2-base/styles/material.css" rel="stylesheet">-->
+<!--    <link href="//cdn.syncfusion.com/ej2/20.4.38/ej2-inputs/styles/material.css" rel="stylesheet">-->
+<!--    <link href="//cdn.syncfusion.com/ej2/20.4.38/ej2-dropdowns/styles/material.css" rel="stylesheet">-->
+<!--    <script src="https://cdn.syncfusion.com/ej2/20.4.38/dist/ej2.min.js" type="text/javascript"></script>-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>$(document).ready(function(){
+    var $cat = $('select[name=category]'),
+    $items = $('select[name=items]');
+
+    $cat.change(function(){
+
+        var $this = $(this).find(':selected'),
+        rel = $this.attr('rel');
+
+        // Hide all
+        $items.find("option").hide();
+
+        // Find all matching accessories
+        // Show all the correct accesories
+        // Select the first accesory
+        $set = $items.find('option.' + rel);
+        $set.show().first().prop('selected', true);
+
+    });
+});
+<!--    </script>-->
+<!--    <script>-->
+<!--   function validateForm() {-->
+<!--  var x = document.forms["form1"]["name"].value;-->
+<!--  if (x == "" || x == null) {-->
+<!--    alert("Name must be filled out");-->
+<!--    return false;-->
+<!--  }-->
+<!--}-->
+<!--    </script>-->
+</head>
+<body style="background-color:#FF577F;">
+<h2>Form</h2>
+<form action="aceepted" name="form1" method="post" >
+<!--    onsubmit="required()-->
+    {% csrf_token %}
+    <input type="text" name="name" required="" oninvalid="alert('You must fill out the name!');" placeholder="Name"><br>
+    <input type="date" name="date" required="" oninvalid="alert('You must fill out the dob!');" placeholder="DOB"><br>
+    <label>Gender</label><br>
+    <input type="radio" name="gender" required="" oninvalid="alert('You must fill out the gender!');" value="male"> Male
+    <input type="radio" name="gender" value="trans"> Transgender
+    <input type="radio" name="gender" value="female"> Female<br>
+
+    <input type="number" name="age" required="" oninvalid="alert('You must fill out the age!');" placeholder="Age"><br>
+    <label>Phone Number</label>
+    <input type="text" name="country code" value="+91" size="2" required="" oninvalid="this.setCustomValidity('Please Enter country code')" >
+<!--    oninput="setCustomValidity('')"-->
+    <input type="text" name="phone" minlength="10" required="" oninvalid="this.setCustomValidity('Please Enter your phone number')" ><br>
+<!--    oninput="setCustomValidity('')"-->
+<!--    <input type="text" name="country code" value="+91" size="2" required="" oninvalid="this.setCustomValidity('Please Enter country code')" oninput="setCustomValidity('')">-->
+<!--    <input type="number" name="pnumber" required="required" oninvalid="alert('You must fill out the form!');" placeholder="phone number"><br>-->
+    <input type="email" name="email" required="" oninvalid="alert('You must fill out the email!');" placeholder="email"><br>
+    <textarea cols="80" rows="6" type="text" name="address" required="" oninvalid="alert('You must fill out the address!');" maxlength="80" placeholder="address"></textarea><br>
+<!--    <div id="container" style="margin:50px auto 0; width:250px;">-->
+<!--        <br>-->
+<!--    <input type="text" id="countries">-->
+<!--&lt;!&ndash;    <div class="padding-top">&ndash;&gt;-->
+<!--    <input type="text" id="states">-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="padding-top">&ndash;&gt;-->
+<!--&lt;!&ndash;          <input type="text" id="cities">&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    <script>-->
+<!--    var ele = document.getElementById('container');-->
+<!--    if(ele) {-->
+<!--        ele.style.visibility = "visible";-->
+<!-- }-->
+<!--    </script>-->
+<!--<script src="{% static 'js/cascade.js' %}" type="text/javascript"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+
+<!--   <h1>Cascading Dropdown Example</h1>-->
+<select name="category" required="" oninvalid="alert('You must fill out the district!');">
+
+    <option value="0">Select District</option>
+    <option value="1" rel="accessories">Ernakulam</option>
+    <option value="2" rel="sports">Thrissur</option>
+    <option value="3" rel="cars">Kannur</option>
+</select>
+<select name="items" class="cascade" required="" oninvalid="alert('You must fill out the district!');">
+    <option value="">select city</option>
+    <option value="3" class="accessories">Chottanikkara</option>
+    <option value="8" class="accessories">Elamakara</option>
+    <option value="1" class="sports">Kunnamkulam</option>
+    <option value="4" class="sports">Cherpu</option>
+    <option value="6" class="cars"> Thalassery</option>
+    <option value="2" class="cars">Payyanur</option>
+</select><br>
+
+    <select name = "accounttype" required="" oninvalid="alert('You must fill out the accounttype!');">
+            <option value="">ACC Type</option>
+            <option value = "saving" >saving</option>
+
+            <option value = "current">current</option>
+
+    </select>
+
+  <div>
+      <label> Material</label><br>
+    <input type="radio" id="c1" name="c1" value="c1" required oninvalid="alert('You must fill out the Material!');">
+    <label for="c1"> debit card</label><br>
+    <input type="checkbox" id="c2" name="c2" value="c2">
+    <label for="c2"> credit card</label><br>
+    <input type="checkbox" id="c3" name="c3" value="c3">
+    <label for="c3"> check book</label><br>
+</div>
+    <a href="{% url 'aceepted' %}">
+   <button name="submit" value="submit" onclick="return Validate()">submit</button>
+   </a>
+  </form>
+  <form action="{% url 'logout' %}">
+   <a href="{% url 'logout' %}">
+   <button name="logout" value="logout">logout</button>
+   </a>
+  </form>
+
+
+</body>
+</html>

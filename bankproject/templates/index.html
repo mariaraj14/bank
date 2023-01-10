@@ -1,0 +1,325 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Tooplate's Little Fashion</title>
+
+        <!-- CSS FILES -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/slick.css' %}"/>
+
+        <link href="{% static 'css/tooplate-little-fashion.css' %}" rel="stylesheet">
+
+
+<!--
+
+Tooplate 2127 Little Fashion
+
+https://www.tooplate.com/view/2127-little-fashion
+
+-->
+    </head>
+    
+    <body>
+
+        <section class="preloader">
+            <div class="spinner">
+                <span class="sk-inner-circle"></span>
+            </div>
+        </section>
+    
+        <main>
+
+<!--            <nav class="navbar navbar-expand-lg" style="background-color:pink;" >-->
+<!--                <div class="container" style="width:25%">-->
+<!--&lt;!&ndash;                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </button>&ndash;&gt;-->
+
+<!--                    <a class="navbar-brand" href="index.html">-->
+<!--                        <strong><span>Home</span> Page</strong>-->
+<!--                    </a>-->
+
+<!--&lt;!&ndash;                    <div class="d-lg-none">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a href="sign-in.html" class="bi-person custom-icon me-3"></a>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <a href="product-detail.html" class="bi-bag custom-icon"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    <div class="collapse navbar-collapse" id="navbarNav">&ndash;&gt;-->
+<!--                    <ul class="navbar-nav mx-auto" >-->
+
+
+<!--                        {% if user.is_authenticated %}-->
+<!--                            <li class="nav-item">-->
+<!--                                Hi! {{user.username}}-->
+<!--                            </li>-->
+
+<!--                            <li class="nav-item">-->
+<!--                                <a href="credentials/logout">logout</a>-->
+<!--                            </li>-->
+
+<!--                        {% else %}-->
+
+<!--                                <li class="nav-item">-->
+<!--                                    <li><a href="credentials/register">Register</a></li>-->
+<!--                                </li>-->
+
+
+
+<!--                                <li class="nav-item">-->
+<!--									<li><a href="credentials/login">Login</a></li>-->
+<!--                                </li>-->
+
+
+<!--                        {% endif %}-->
+
+<!--&lt;!&ndash;                            <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a class="nav-link active" href="index.html">Login</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                            <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <a class="nav-link" href="about.html">Register</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </li>&ndash;&gt;-->
+<!--                    </ul>-->
+
+<!--                           <div class="dropdown">-->
+
+<!--                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                 Branch-->
+<!--                                </button>-->
+<!--                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+<!--                                     <a href="https://en.wikipedia.org/wiki/Ernakulam"> Ernakulam</a></br>-->
+<!--                                     <a href="https://en.wikipedia.org/wiki/Thrissur"> Thrissur</a>-->
+<!--                                     <a href="https://en.wikipedia.org/wiki/Pathanamthitta"> Pathanamthitta</a>-->
+<!--                                     <a href="https://en.wikipedia.org/wiki/Kannur"> Kannum</a></br>-->
+<!--                                     <a href="https://en.wikipedia.org/wiki/Kollam"> Kollam</a></br>-->
+<!--                                     <a href="https://en.wikipedia.org/wiki/Kasaragod"> Kasercode</a>-->
+<!--                                </ul>-->
+
+<!--                    </div>-->
+<!--                            </div>-->
+<!--                          </div>-->
+
+
+
+
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="faq.html">FAQs</a>-->
+<!--                            </li>-->
+
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link" href="contact.html">Contact</a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+
+<!--                        <div class="d-none d-lg-block">-->
+<!--                            <a href="sign-in.html" class="bi-person custom-icon me-3"></a>-->
+
+<!--                            <a href="product-detail.html" class="bi-bag custom-icon"></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </nav>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" >
+  <a class="navbar-brand nav-item nav-link disabled" href="#" style="font:20px;color:brown;font-size:25px;">HOME</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <ul class="navbar-nav mx-auto" >
+         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            <div class="navbar-nav" style="">
+
+
+                    <nav  class="main_nav" style="margin-left: 256px;">
+                    <ul class="d-flex flex-row align-items-start ">
+                        {% if user.is_authenticated %}
+                            <a class="nav-item">
+                               <h5 style="color:orange;"> Hi! {{user.username}}</h5>
+                            </a>
+
+
+                            <a class="nav-item">
+                                <button ><a href="credentials/logout">logout</a></button>
+                            </a>
+                            <button><a href="credentials/form">form</a> </button>
+
+                        {% else %}
+
+
+                                <a class="nav-item">
+                                    <button><a href="credentials/register">Register</a></button>
+                                </a>
+
+
+
+                                <a class="nav-item">
+                                    <button><a href="credentials/login">Login</a></button>
+                                </a>
+
+
+                        {% endif %}
+                    </ul>
+</nav>
+
+
+
+<!--      <a class="nav-item nav-link" href="credentials/register">Register</a>-->
+<!--      <a class="nav-item nav-link" href="credentials/login">Login</a>-->
+<!--      <a class="nav-item nav-link active" href="#">Register </a>-->
+<!--      <a class="nav-item nav-link" href="#">Login</a>-->
+        <div class="dropdown">
+
+                                <button class="dropbtn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                 Branch<i class="fa fa-caret-down"></i>
+                                </button>
+                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                     <a href="https://en.wikipedia.org/wiki/Ernakulam"> Ernakulam</a></br>
+                                     <a href="https://en.wikipedia.org/wiki/Thrissur"> Thrissur</a>
+                                     <a href="https://en.wikipedia.org/wiki/Pathanamthitta"> Pathanamthitta</a>
+                                     <a href="https://en.wikipedia.org/wiki/Kannur"> Kannum</a></br>
+                                     <a href="https://en.wikipedia.org/wiki/Kollam"> Kollam</a></br>
+                                     <a href="https://en.wikipedia.org/wiki/Kasaragod"> Kasercode</a>
+                                </ul>
+
+        </div>
+
+
+
+
+    </ul>
+    </div>
+  </div>
+</nav>
+            <section class="slick-slideshow">   
+                <div class="slick-custom">
+                    <img src="{% static 'images/slideshow/medium-shot-business-women-high-five.jpeg' %}" class="img-fluid" alt="">
+
+                    <div class="slick-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-10">
+                                    <h1 class="slick-title">Cool Bank</h1>
+
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">Bank</p>
+
+                                    <a href="about.html" class="btn custom-btn">Learn more about us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slick-custom">
+                    <img src="{% static 'images/slideshow/team-meeting-renewable-energy-project.jpeg' %}" class="img-fluid" alt="">
+
+                    <div class="slick-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-10">
+                                    <h1 class="slick-title">New Design</h1>
+
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">Please share this Little Fashion template to your friends. Thank you for supporting us.</p>
+
+                                    <a href="product.html" class="btn custom-btn">Explore products</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slick-custom">
+                    <img src="{% static 'images/slideshow/two-business-partners-working-together-office-computer.jpeg' %}" class="img-fluid" alt="">
+
+                    <div class="slick-bottom">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-10">
+                                    <h1 class="slick-title">Talk to us</h1>
+
+                                    <p class="lead text-white mt-lg-3 mb-lg-5">Bank.</p>
+
+                                    <a href="contact.html" class="btn custom-btn">Work with us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-10 me-auto mb-4">
+                        <h4 class="text-white mb-3"><a href="index.html">Cool</a> Bank</h4>
+                        <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little Fashion</strong></p>
+                        <br>
+                        <p class="copyright-text">Designed by <a href="https://www.tooplate.com/" target="_blank">Tooplate</a></p>
+                    </div>
+
+                    <div class="col-lg-5 col-8">
+                        <h5 class="text-white mb-3">Sitemap</h5>
+
+                        <ul class="footer-menu d-flex flex-wrap">
+                            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Products</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Privacy policy</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">FAQs</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-4">
+                        <h5 class="text-white mb-3">Social</h5>
+
+                        <ul class="social-icon">
+
+                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+
+                            <li><a href="#" class="social-icon-link bi-skype"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/Headroom.js' %}"></script>
+        <script src="{% static 'js/jQuery.headroom.js' %}"></script>
+        <script src="{% static 'js/slick.min.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+
+    </body>
+</html>
